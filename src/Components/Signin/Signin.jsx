@@ -1,5 +1,5 @@
 import { useContext } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
@@ -36,12 +36,12 @@ const Signin = () => {
                     <input className="p-2 rounded-md mb-3 w-full" type="email" name="email" placeholder="Enter your email address" />
                 </div>
                 <div>
-                    <p className="font-semibold mb-3">Password</p>
+                    
                     <input className="p-2 rounded-md mb-8 w-full" type="password" name="password" placeholder="Enter your email password" />
                 </div>
                 <button className="bg-slate-900 p-3 rounded-md text-white w-full">Login</button>
                 </form>
-                
+                <p className="text-center mt-4">Dont’t Have An Account ? <Link to={"/signup"} className="text-[#D72050] font-semibold">Sign Up</Link></p>
             </div>
         </div>
         </div>
