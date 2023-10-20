@@ -6,11 +6,6 @@ import { AuthContext } from './../AuthProvider/AuthProvider';
 const Signup = () => {
     const {signUp} = useContext(AuthContext)
 
-    const [signupError, setSignupError] = useState('')
-    const [success, setSuccess] = useState('')
-    const [six, setSix] = useState('')
-    const [capital, setCapital] = useState('')
-    const [special, setSpecial] = useState('')
 
     const handleSignUp = e => {
         e.preventDefault();
