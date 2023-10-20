@@ -1,10 +1,15 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Signin = () => {
-    const {signIn} = useContext(AuthContext)
+    const {signIn, googleSignUp} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const [signinError, setSigninError] = useState('')
+    console.log(signinError);
 
     const handleSignin = e => {
         e.preventDefault();
@@ -15,11 +20,27 @@ const Signin = () => {
         signIn(email, password)
         .then(result => {
             console.log(result);
+            navigate(location ?.state ? location.state : '/');
         })
         .then(error => {
             console.log(error);
+            setSigninError(error.code)
+            return;
         })
         
+    }
+
+    const signInGoogle = () => {
+        googleSignUp()
+        .then(result => {
+            console.log(result.user);
+            navigate(location ?.state ? location.state : '/');
+            // setSuccess('User created successfully')
+        })
+        .catch(error => {
+            console.error(error);
+            // setSignupError(error.message)
+        })
     }
     return (
         <div>
@@ -36,11 +57,23 @@ const Signin = () => {
                     <input className="p-2 rounded-md mb-3 w-full" type="email" name="email" placeholder="Enter your email address" />
                 </div>
                 <div>
-                    
+                    <p className="font-semibold mb-3">Password</p>
                     <input className="p-2 rounded-md mb-8 w-full" type="password" name="password" placeholder="Enter your email password" />
                 </div>
-                <button className="bg-slate-900 p-3 rounded-md text-white w-full">Login</button>
+                <div>
+                {
+                    signinError && <div className="mb-3">
+                   <div className="alert alert-error">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span>{signinError}</span>
+                    </div>
+                    
+                </div>
+                }
+                </div>
+                <button className="bg-slate-900 p-3 rounded-md text-white w-full mb-3">Login</button>
                 </form>
+                <button onClick={signInGoogle} className="bg-slate-900 p-3 rounded-md text-white w-full">Signin With Google</button>
                 <p className="text-center mt-4">Dont’t Have An Account ? <Link to={"/signup"} className="text-[#D72050] font-semibold">Sign Up</Link></p>
             </div>
         </div>

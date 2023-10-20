@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import CategoryCard from "../CategoryCard/CategoryCard";
+// import { useEffect, useState } from "react";
+// import CategoryCard from "../CategoryCard/CategoryCard";
 // import { FaArrowRight } from "react-icons/fa";
 // import { LuView } from "react-icons/lu";
 // import { Link } from "react-router-dom";
@@ -7,33 +7,56 @@ import CategoryCard from "../CategoryCard/CategoryCard";
 // import { BiSolidCommentDetail } from "react-icons/bi";
 // import { BsBookmarkHeartFill } from "react-icons/bs";
 
+import { Link } from "react-router-dom";
+
 
 
 const Categories = () => {
-    const [categoryData, setCategoryData] = useState([])
+    // const [categoryData, setCategoryData] = useState()
 
-    useEffect( () => {
-        fetch('http://localhost:5000/categorydata')
-        .then(res => res.json())
-        .then(data => {
-            setCategoryData(data);
-        })
-    }, [])
+    // useEffect( () => {
+    //     fetch('http://localhost:5000/card')
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         setCategoryData(data);
+    //     })
+    // }, [])
     return (
         <div className="px-20">
             <div className="py-8">
-                <h1 className="text-blue-700 text-3xl font-bold mb-4">Hot Categories</h1>
+                <h1 className="text-blue-700 text-3xl font-bold mb-4">Our All Brands</h1>
                 <div className="flex items-center">
                     <div className="bg-blue-600 w-64 h-1"></div>
                     <div className="bg-slate-400 w-full h-1"></div>
                 </div>
             </div>
 
-           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+           {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                      categoryData.map(category => <CategoryCard key={category._id} category={category}></CategoryCard>)
                  }
 
+           </div> */}
+
+           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <Link to={"/samsung"}>
+                    <img className="w-56" src="../../../public/samsung.png" alt="" />
+                </Link >
+                <Link to={"/apple"}>
+                    <img className="w-56" src="../../../public/apple.png" alt="" />
+                </Link>
+                <Link to={"/google"}>
+                    <img className="w-56" src="../../../public/google.png" alt="" />
+                </Link>
+                <Link to={"/huawei"}>
+                    <img className="w-56" src="../../../public/huawei.png" alt="" />
+                </Link>
+                <Link to={"/sony"}>
+                    <img className="w-56" src="../../../public/sony.png" alt="" />
+                </Link>
+                <Link to={"/xiomi"}>
+                    <img className="w-56" src="../../../public/xiomi.png" alt="" />
+                </Link>
            </div>
                 
         </div>

@@ -10,14 +10,15 @@ const AddProduct = () => {
         const brand = e.target.brand.value;
         const type = e.target.type.value;
         const price = e.target.price.value;
+        const previousPrice = e.target.previousPrice.value;
         const description = e.target.description.value;
         const photo = e.target.photo.value;
 
-        const newdata = {name, brand, type, price, description, photo}
+        const newdata = {name, brand, type, price,previousPrice, description, photo}
         console.log(newdata);
 
 
-        fetch('http://localhost:5000/card', {
+        fetch('http://localhost:5000/samsungData',  {
             method : "POST",
             headers : {
                 'content-type' : 'application/json'
@@ -66,9 +67,15 @@ const AddProduct = () => {
                         <h1 className="font-semibold mb-2">Product Tpye</h1>
                         <input type="text" name="type" placeholder="Enter Product Type" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
                     </div>
-                    <div>
-                        <h1 className="font-semibold mb-2">Price</h1>
-                        <input type="text" name="price" placeholder="Enter the Product price" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                    <div className="grid md:grid-cols-2 gap-5">
+                        <div>
+                            <h1 className="font-semibold mb-2">Current Price</h1>
+                            <input type="text" name="price" placeholder="Enter The Product Price" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                        </div>
+                        <div>
+                            <h1 className="font-semibold mb-2">Previous Price</h1>
+                            <input type="text" name="previousPrice" placeholder="Enter Previous Price" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                        </div>
                     </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 mb-5 justify-center">
