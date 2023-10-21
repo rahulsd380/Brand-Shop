@@ -269,7 +269,14 @@ const Banner = () => {
         <div>
         <h1 className="text-white font-bold text-5xl mb-3 bg-gradient-to-br from-yellow-300  to-red-600 bg-clip-text text-transparent dark:text-orange-500">Experience the Latest Ever Smartphones By This Era...</h1>
         <p className="text-white mt-6 text-justify">Explore a world of cutting-edge smartphones, from flagship models to budget-friendly options. Find the perfect device to stay connected and capture life's moments.Explore a world of cutting-edge smartphones, from flagship models to budget-friendly options.</p>
-        
+        <div className="flex gap-10 py-10">
+            <Link to={"/signup"} className="rounded-lg focus:outline-none h-12 px-5 bg-gradient-to-br from-yellow-300  to-red-600 text-white font-semibold flex items-center w-32">
+            Read More
+            </Link>
+            <Link to={"/signup"} className="rounded-lg focus:outline-none h-12 px-5 bg-gradient-to-br from-yellow-300  to-red-600 text-white font-semibold flex items-center w-28">
+            Join Now
+            </Link>
+        </div>
         </div>
 
         <div>
