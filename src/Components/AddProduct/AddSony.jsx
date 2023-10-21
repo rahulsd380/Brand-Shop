@@ -18,7 +18,7 @@ const AddSony = () => {
         console.log(newdata);
 
 
-        fetch('http://localhost:5000/sonyData',  {
+        fetch('https://brand-shop-side-server.vercel.app/sonyData',  {
             method : "POST",
             headers : {
                 'content-type' : 'application/json'

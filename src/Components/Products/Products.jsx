@@ -6,7 +6,7 @@ const Products = () => {
   return (
     <div className="w-72">
       <div className="border border-gray-400 rounded-md">
-        <img src="../../../public/Rectangle 16.png" alt="" />
+        <img src="/Rectangle 16.png" alt="" />
       </div>
 
         {/* Timer */}

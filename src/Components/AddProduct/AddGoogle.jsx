@@ -18,7 +18,7 @@ const AddGoogle = () => {
         console.log(newdata);
 
 
-        fetch('http://localhost:5000/googleData',  {
+        fetch('https://brand-shop-side-server.vercel.app/googleData',  {
             method : "POST",
             headers : {
                 'content-type' : 'application/json'

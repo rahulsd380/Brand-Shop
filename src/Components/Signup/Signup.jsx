@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import { useContext, useState } from 'react';
 import { AuthContext } from './../AuthProvider/AuthProvider';
+import Navbar from "../Navbar/Navbar";
 
 
 const Signup = () => {
     const {signUp} = useContext(AuthContext)
 
+    const [signupError, setSignupError] = useState('')
+    const [success, setSuccess] = useState('')
+    const [six, setSix] = useState('')
+    const [capital, setCapital] = useState('')
+    const [special, setSpecial] = useState('')
 
     const handleSignUp = e => {
         e.preventDefault();
@@ -50,6 +56,7 @@ const Signup = () => {
     
     return (
         <div>
+            <Navbar></Navbar>
                    <div>
             <div className="max-w-6xl mx-auto mt-10">
             </div>

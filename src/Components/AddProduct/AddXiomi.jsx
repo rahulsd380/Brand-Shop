@@ -18,7 +18,7 @@ const AddXiomi = () => {
         console.log(newdata);
 
 
-        fetch('http://localhost:5000/xiomiData',  {
+        fetch('https://brand-shop-side-server.vercel.app/xiomiData',  {
             method : "POST",
             headers : {
                 'content-type' : 'application/json'

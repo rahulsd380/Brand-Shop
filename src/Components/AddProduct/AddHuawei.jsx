@@ -18,7 +18,7 @@ const AddHuawei = () => {
         console.log(newdata);
 
 
-        fetch('http://localhost:5000/huaweiData',  {
+        fetch('https://brand-shop-side-server.vercel.app/huaweiData',  {
             method : "POST",
             headers : {
                 'content-type' : 'application/json'

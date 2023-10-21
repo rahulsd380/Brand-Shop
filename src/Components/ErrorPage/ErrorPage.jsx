@@ -3,7 +3,7 @@
 const ErrorPage = () => {
     return (
         <div>
-            <img className="w-full" src="../../../public/404.gif" alt="" />
+            <img className="w-full" src="/404.gif" alt="" />
         </div>
     );
 };

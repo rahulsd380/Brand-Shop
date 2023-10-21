@@ -30,6 +30,7 @@ import AddHuawei from './Components/AddProduct/AddHuawei';
 import AddApple from './Components/AddProduct/AddApple';
 import AddGoogle from './Components/AddProduct/AddGoogle';
 import AddXiomi from './Components/AddProduct/AddXiomi';
+import MyCart from './Components/MyCart/MyCart';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path : "/signup",
         element : <Signup></Signup>
+      },
+      {
+        path : "/myCart",
+        element : <MyCart></MyCart>
       },
       {
         path : "/signin",
@@ -75,32 +80,32 @@ const router = createBrowserRouter([
       {
         path : "/details1/:_id",
         element : <PrivateRoute><Details1></Details1></PrivateRoute>,
-        loader : () => fetch('http://localhost:5000/samsungData')
+        loader : () => fetch('https://brand-shop-side-server.vercel.app/samsungData')
       },
       {
         path : "/appledetails/:_id",
         element : <Details2></Details2>,
-        loader : () => fetch('http://localhost:5000/appleData')
+        loader : () => fetch('https://brand-shop-side-server.vercel.app/appleData')
       },
       {
         path : "/sonyDetails/:_id",
         element : <Details3></Details3>,
-        loader : () => fetch('http://localhost:5000/sonyData')
+        loader : () => fetch('https://brand-shop-side-server.vercel.app/sonyData')
       },
       {
         path : "/huaweiDetails/:_id",
         element : <Details4></Details4>,
-        loader : () => fetch('http://localhost:5000/huaweiData')
+        loader : () => fetch('https://brand-shop-side-server.vercel.app/huaweiData')
       },
       {
         path : "/googleDetails/:_id",
         element : <Details5></Details5>,
-        loader : () => fetch('http://localhost:5000/googleData')
+        loader : () => fetch('https://brand-shop-side-server.vercel.app/googleData')
       },
       {
         path : "/xiomiDetails/:_id",
         element : <Details6></Details6>,
-        loader : () => fetch('http://localhost:5000/xiomiData')
+        loader : () => fetch('https://brand-shop-side-server.vercel.app/xiomiData')
       },
       {
         path : "/samsung",

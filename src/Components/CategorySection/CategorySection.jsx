@@ -8,7 +8,7 @@ const CategorySection = () => {
   
     // Fetch data from the API
     useEffect(() => {
-      fetch('http://localhost:5000/card')
+      fetch('https://brand-shop-side-server.vercel.app/card')
         .then(response => response.json())
         .then(data => setData(data))
         .catch(error => console.error('Error fetching data: ', error));
@@ -123,7 +123,7 @@ export default CategorySection;
     
 
 //     useEffect( () => {
-//         fetch('http://localhost:5000/card')
+//         fetch('https://brand-shop-side-server.vercel.app/card')
 //         .then(res => res.json())
 //         .then(data => {
 //             setAllProduct(data);

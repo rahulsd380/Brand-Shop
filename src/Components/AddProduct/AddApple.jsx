@@ -18,7 +18,7 @@ const AddApple = () => {
         console.log(newdata);
 
 
-        fetch('http://localhost:5000/appleData',  {
+        fetch('https://brand-shop-side-server.vercel.app/appleData',  {
             method : "POST",
             headers : {
                 'content-type' : 'application/json'

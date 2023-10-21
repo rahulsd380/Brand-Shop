@@ -18,7 +18,7 @@ const AddProduct = () => {
         console.log(newdata);
 
 
-        fetch('http://localhost:5000/samsungData',  {
+        fetch('https://brand-shop-side-server.vercel.app/samsungData',  {
             method : "POST",
             headers : {
                 'content-type' : 'application/json'
@@ -47,7 +47,7 @@ const AddProduct = () => {
                 <h1 >Back To Home</h1>
             </NavLink>
            <form onSubmit={handleAddProduct} className="py-10">
-            <div className="max-w-6xl mx-auto bg-[#F4F3F0] p-7 rounded-lg">
+            <div className="max-w-6xl mx-auto bg-gray-100 p-7 rounded-lg">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-4xl text-[#374151] font-bold text-center mb-4">Add A New Product</h1>
                     <p className="text-justify mb-8">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
@@ -55,39 +55,39 @@ const AddProduct = () => {
                 <div className="grid md:grid-cols-2 gap-8 mb-5 justify-center">
                     <div>
                         <h1 className="font-semibold mb-2">Name</h1>
-                        <input type="text" name="name" placeholder="Enter Product Name" className="border-2 border-gray-300 bg-white p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                        <input type="text" name="name" placeholder="Enter Product Name" className="border-2 border-gray-300 bg-white p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-gray-500" />
                     </div>
                     <div>
                         <h1 className="font-semibold mb-2">Brand Name</h1>
-                        <input type="text" name="brand" placeholder="Enter Brand Name" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                        <input type="text" name="brand" placeholder="Enter Brand Name" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-gray-500" />
                     </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 mb-5 justify-center">
                     <div>
                         <h1 className="font-semibold mb-2">Product Tpye</h1>
-                        <input type="text" name="type" placeholder="Enter Product Type" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                        <input type="text" name="type" placeholder="Enter Product Type" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-gray-500" />
                     </div>
                     <div className="grid md:grid-cols-2 gap-5">
                         <div>
                             <h1 className="font-semibold mb-2">Current Price</h1>
-                            <input type="text" name="price" placeholder="Enter The Product Price" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                            <input type="text" name="price" placeholder="Enter The Product Price" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-gray-500" />
                         </div>
                         <div>
                             <h1 className="font-semibold mb-2">Previous Price</h1>
-                            <input type="text" name="previousPrice" placeholder="Enter Previous Price" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                            <input type="text" name="previousPrice" placeholder="Enter Previous Price" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-gray-500" />
                         </div>
                     </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 mb-5 justify-center">
                     <div className='col-span-2'>
                         <h1 className="font-semibold mb-2">Description</h1>
-                        <input type="text" name="description" placeholder="Enter Your Products's Short Description" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                        <input type="text" name="description" placeholder="Enter Your Products's Short Description" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-gray-500" />
                     </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 mb-5 justify-center">
                     <div className='col-span-2'>
                         <h1 className="font-semibold mb-2">Photo URL</h1>
-                        <input type="text" name="photo" placeholder="Enter You product Photo URL" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-[#8d5839]" />
+                        <input type="text" name="photo" placeholder="Enter You product Photo URL" className="border-2 border-gray-300 bg-white  p-3 mb-4 rounded-lg w-full text-sm focus:outline-none focus:border-[#e48e5c] transition duration-300 ease-in-out hover:border-gray-500" />
                     </div>
                 </div>
                 <h1 className="font-semibold mb-2">Rating</h1>
@@ -100,7 +100,7 @@ const AddProduct = () => {
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 mb-5 justify-center">
                     <div className='col-span-2'>
-                        <input type="submit" value="Add Product" className="p-2 border border-[#331A15] rounded-md w-full bg-[#D2B48C] font-semibold btn" />
+                        <input type="submit" value="Add Product" className="p-2 border border-[#331A15] rounded-md w-full bg-gradient-to-r from-slate-900 to-slate-700 text-white font-semibold btn" />
                     </div>
                 </div>
             </div>

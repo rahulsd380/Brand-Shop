@@ -2,13 +2,37 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsFillCartCheckFill } from 'react-icons/bs';
 import { AiFillHeart } from 'react-icons/ai';
+import Swal from "sweetalert2";
 
 
 const GoogleData = ({card}) => {
-    const {img, name, price, previousPrice, description} = card;
+    const {_id, img, name, brand, price, previousPrice, description} = card;
     const [toggle, setToggle] = useState(1)
     const toogleTabs = (id) => {
         setToggle(id)
+      }
+
+      const newData = {_id, img, brand, name, price, previousPrice, description}
+      const handleSubmit = () => {
+        fetch('https://brand-shop-side-server.vercel.app/wishList',  {
+            method : "POST",
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify(newData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Product added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Close'
+                  })
+            }
+        })
       }
     return (
         <div>
@@ -61,13 +85,13 @@ const GoogleData = ({card}) => {
           {description}
           </p>
           <div className="flex gap-10">
-            <Link
+            <button onClick={handleSubmit}
               to={"/"}
               className="focus:outline-none h-12 w-auto p-3 border border-gray-400 rounded-md bg-slate-100 font-semibold hover:bg-[#e6e7f5] transition duration-300 flex items-center justify-center mb-5 gap-2"
             >
               Add To Cart
               <BsFillCartCheckFill className="text-2xl"></BsFillCartCheckFill>
-            </Link>
+            </button>
             <Link
               to={"/"}
               className="focus:outline-none h-12 w-auto p-3 border border-gray-400 rounded-md bg-slate-100 font-semibold hover:bg-[#e6e7f5] transition duration-300 flex items-center justify-center mb-5 gap-2"
