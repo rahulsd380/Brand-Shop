@@ -164,10 +164,7 @@ const Banner = () => {
       <video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover" src={bgVideo}></video>
       <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10">
-        {/* <div className="flex items-center gap-4 text-4xl bg-gray-400 justify-end">
-        <button onClick={handleDark}><MdDarkMode></MdDarkMode></button>
-        <button onClick={handleLight}><MdLightMode className="text-yellow-400"></MdLightMode></button>
-      </div> */}
+        
       {/* navbar */}
       <div>
       <div className="navbar px-10">
@@ -199,6 +196,11 @@ const Banner = () => {
           <NavLink to={"/"} className="flex gap-2 items-center">
             <img className="w-16" src="/Logo.png" alt="" />
             <h1 className="text-3xl font-bold text-white"><span className="text-purple-700 text-4xl">T</span>ech<span className="text-orange-600 text-4xl">N</span>est</h1>
+
+            <div className="flex items-center gap-4 text-4xl">
+        <button className="text-white" onClick={handleDark}><MdDarkMode></MdDarkMode></button>
+        <button onClick={handleLight}><MdLightMode className="text-yellow-400"></MdLightMode></button>
+      </div>
           </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -265,7 +267,7 @@ const Banner = () => {
   <div id="slide1" className="carousel-item relative w-full">
     <div  className="px-20 py-9 grid md:grid-cols-2 gap-10 items-center">
         <div>
-        <h1 className="text-white font-bold text-5xl mb-3 bg-gradient-to-br from-yellow-300  to-red-600 bg-clip-text text-transparent dark:text-yellow-100">Experience the Latest Ever Smartphones By This Era...</h1>
+        <h1 className="text-white font-bold text-5xl mb-3 bg-gradient-to-br from-yellow-300  to-red-600 bg-clip-text text-transparent dark:text-orange-500">Experience the Latest Ever Smartphones By This Era...</h1>
         <p className="text-white mt-6 text-justify">Explore a world of cutting-edge smartphones, from flagship models to budget-friendly options. Find the perfect device to stay connected and capture life's moments.Explore a world of cutting-edge smartphones, from flagship models to budget-friendly options.</p>
         <div className="flex gap-10 py-10">
             <Link to={"/signup"} className="rounded-lg focus:outline-none h-12 px-5 bg-gradient-to-br from-yellow-300  to-red-600 text-white font-semibold flex items-center w-32">

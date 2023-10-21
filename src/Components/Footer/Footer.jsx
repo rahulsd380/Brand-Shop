@@ -4,6 +4,7 @@ import { FaFacebookF,FaTwitter,FaGooglePlusG, FaLinkedinIn } from "react-icons/f
 const Footer = () => {
   return (
     <div className="mt-10">
+        <div className="relative z-10">
         <div className="bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r flex justify-around items-center p-6">
             <div className="flex gap-6 items-center">
                 <button className="w-10 h-10 rounded-full bg-white text-xl text-gray-800 border flex justify-center items-center hover:bg-orange-400 hover:text-white transition duration-300 ease-in-out hover:border-none"><FaFacebookF/></button>
@@ -62,6 +63,7 @@ const Footer = () => {
         <p>TechNest © 2023 Demo Store. All Rights Reserved By Designer <span className="text-orange-400">Rahul Sutradhar</span></p>
         <img className="w-16" src="/Logo.png" alt="" />
       </div>
+        </div>
     </div>
   );
 };

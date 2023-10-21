@@ -46,12 +46,12 @@ const Navbar2 = () => {
                 className="h-12 px-5 text-sm focus:outline-none focus:border-orange-400 transition duration-300 ease-in-out hover:border-orange-800"
                 type="text"
                 id="exampleInput"
-                placeholder="Enter your email..."
+                placeholder="Samsung phone..."
               />
             </div>
             <div className="">
               <button className="rounded-r-md focus:outline-none p-3 bg-orange-400 text-white font-semibold hover:bg-orange-500 transition duration-300">
-                Subscribe
+                Search
               </button>
             </div>
           </div>
